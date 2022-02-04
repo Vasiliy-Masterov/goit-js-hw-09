@@ -2,8 +2,6 @@ function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
 
-console.log("Hello");
-
 const buttonStartEl = document.querySelector('[data-start]');
 const buttonStopEl = document.querySelector('[data-stop]');
 const bodyEl = document.querySelector('body');
