@@ -28,51 +28,10 @@ function createPromise(position, delay) {
     const shouldResolve = Math.random() > 0.3;
     setTimeout(() => {
       if (shouldResolve) {
-        resolve({position, delay});
+        resolve({ position, delay });
       } else {
-        reject({position, delay});
+        reject({ position, delay });
       }
     }, delay);
   });
 }
-
-
-
-
-
-
-//submitBtn.addEventListener('click', event => { 
-
-//});
-
-
-
-/*
-
-createPromise(2, 1500)
-  .then(({ position, delay }) => {
-    console.log(`✅ Fulfilled promise ${position} in ${delay}ms`);
-    return Notiflix.Notify.success(`Fulfilled promise ${position} in ${delay}ms`);
-  })
-  .catch(({ position, delay }) => {
-    console.log(`❌ Rejected promise ${position} in ${delay}ms`);
-    return Notiflix.Notify.failure(`Rejected promise ${position} in ${delay}ms`);
-  });
-
-
-<form class="form">
-      <label>
-        First delay (ms)
-        <input type="number" name="delay" required />
-      </label>
-      <label>
-        Delay step (ms)
-        <input type="number" name="step" required />
-      </label>
-      <label>
-        Amount
-        <input type="number" name="amount" required />
-      </label>
-      <button type="submit">Create promises</button>
-    </form>
-    */
